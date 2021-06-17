@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{listingsutf8}
+
+\title{Semesterprojekt \\ Krediteringssystem til TV 2}
+\author{Peter Heilbo Ratgen}
+\date{\today}
+
+\hfuzz=10pt
+
+\begin{document}
+\maketitle
+
+\section{Notater til præsentation}%
+\label{sec:notater_til_praesentation}
+
+\paragraph{Hvad fandt du særligt interressant?}%
+\label{par:hvad_fandt_du_saerligt_interressant}
+Særligt interressant fandt jeg processen i og omkring lagdelingen af systemet.
+Vigtigheden af designprocessen understreges af den tid vi brugte til at
+refaktorere system således at der var en egentlig lagdeling. At lave om i
+systemet var svært i begyndelsen før refaktoringen, siden vi havde lavet en
+monolitisk applikation. Vores system havde en tæt kobling i mellem
+præsentationslaget og domænelaget. 
+
+Denne tætte kobling medførte at det var sværere at lave ændringer i systemet,
+uden at skulle lave ændringer mange steder i koden.
+
+Ignnem lagdelingen lavede vi konkrete vurderinger af hvad de hørte til hvor. Fx
+er var det meget tydeligt at forrentningsdata ikke hører til i og omkring
+præsentationlaget. Vi lavede også en separering af data fra de egentlige
+dataobjekter, således vi kun afhang af interfaces.
+
+Denne fornyede designprocess valgte vi også at anvende
+model-view-controller designmønstreret til at understøtte lagdelingen, samt at
+kunne separere views og controllers.
+
+\end{document}
